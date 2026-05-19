@@ -1,0 +1,13 @@
+FROM teamide/ubuntu-node:1.1
+
+ADD install-claude-code.sh /home/install-claude-code.sh
+ADD claude-web /opt/claude-web
+ADD claude-code-webui /opt/claude-code-webui
+
+RUN chmod +x /home/install-claude-code.sh && \
+    /home/install-claude-code.sh && \
+    npm install -g claude-code-webui && \
+    python3 -m venv /opt/myenv && \
+    . /opt/myenv/bin/activate && \
+    pip3 install claude-web-ui
+

@@ -1,0 +1,6 @@
+FROM teamide/ubuntu-node:1.0
+
+ADD install-claude-code.sh /home/install-claude-code.sh
+
+RUN chmod +x /home/install-claude-code.sh && \
+    /home/install-claude-code.sh
