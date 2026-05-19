@@ -14,4 +14,4 @@ currentDir=$(pwd)
 echo "当前目录：$currentDir"
 
 
-docker build -t teamide/ubuntu-node:1.1 -f Dockerfile-ubuntu-node-v1.1 .
+docker build -t teamide/ubuntu-node:1.2 -f Dockerfile-ubuntu-node-v1.2 .
